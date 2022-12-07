@@ -1,0 +1,100 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  border: 2px solid rgb(231,231,231);
+}
+
+.sub-container {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.sub-container > h3 {
+  padding-left: 20px;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(119, 119, 119);
+}
+
+.sub-container > input {
+  padding-left: 20px;
+  margin: 20px 0;
+  width: 100%;
+  border: none;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.todo-list > li {
+  margin: 20px 0;
+  padding-left: 20px;
+  color: rgb(138,138,138);
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+#footer {
+  width: 300px;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+
+#footer > p {
+  margin: 20px 0;
+  color: gray;
+  font-size: 1.2rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+hr {
+  border: 1px solid;
+  height: 0.3px;
+  width: 100%;
+  margin: 0;
+  color: #F0F0F0;
+}
+
+.img2 {
+  margin-right: 20px;
+}
+
+.list-items {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.checkbox {
+  margin: 0 20px;
+}
+
+.bar {
+  margin-right: 25px;
+}
+
+
