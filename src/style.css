@@ -86,6 +86,7 @@ hr {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+  color: gray;
 }
 
 .checkbox {
