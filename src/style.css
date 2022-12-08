@@ -85,7 +85,7 @@ hr {
 .list-items {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  padding: 20px 0;
   color: gray;
 }
 
@@ -95,4 +95,26 @@ hr {
 
 .bar {
   margin-right: 25px;
+}
+
+.hover1:hover {
+  cursor: pointer;
+}
+
+#input1 {
+  border-style: none;
+  outline: none;
+}
+
+.input2-container {
+  width: 80%;
+}
+
+.desc-input {
+  border-style: none;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: gray;
+  width: 80%;
 }

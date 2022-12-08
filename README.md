@@ -55,6 +55,10 @@
 
 - Run this command: git clone https://github.com/Anand8317/todo-list1.git
 
+- Download the depedencies (node_modules)
+
+- Run this command: npm start server
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
