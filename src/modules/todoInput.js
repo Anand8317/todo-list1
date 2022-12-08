@@ -2,54 +2,54 @@ import trash from '../Images/trash.png';
 import threedotsvertical from '../Images/threedotsvertical.png';
 import del from './del';
 import edit from './edittask';
-import {setLs,} from './localStorage';
+import { setLs } from './localStorage';
 import display from './display';
 
 const todoInput = () => {
   let inputs = document.getElementsByClassName('desc-input');
   inputs = [...inputs];
-  inputs.forEach( (input) => {
+  inputs.forEach((input) => {
     input.addEventListener('focusin', () => {
-      let par = input.parentNode.parentNode;
+      const par = input.parentNode.parentNode;
       par.style.backgroundColor = '#feffca';
       input.style.backgroundColor = '#feffca';
-      let img = input.parentNode.nextElementSibling;
+      const img = input.parentNode.nextElementSibling;
       img.src = trash;
-      
+
       img.addEventListener('click', () => {
         del(par.id);
         setLs();
         display();
         todoInput();
-      })
-    })
+      });
+    });
 
-    input.addEventListener('focusout', (event) => {
-      let par = input.parentNode.parentNode;
+    input.addEventListener('focusout', () => {
+      const par = input.parentNode.parentNode;
       edit(input.value, par.id);
       setLs();
-      input.value = input.value;
+      // input.value = input.value;
       par.style.backgroundColor = 'white';
       input.style.backgroundColor = 'white';
-      let img = input.parentNode.nextElementSibling;
+      const img = input.parentNode.nextElementSibling;
       img.src = threedotsvertical;
-    })
+    });
 
     input.addEventListener('keypress', (event) => {
-      let par = input.parentNode.parentNode;
-      
-      if (event.key === "Enter") {
+      const par = input.parentNode.parentNode;
+
+      if (event.key === 'Enter') {
         event.preventDefault();
         edit(input.value, par.id);
         setLs();
-        input.value = input.value;
+        // input.value = input.value;
         par.style.backgroundColor = 'white';
         input.style.backgroundColor = 'white';
-        let img = input.parentNode.nextElementSibling;
+        const img = input.parentNode.nextElementSibling;
         img.src = threedotsvertical;
       }
-    })
+    });
   });
-}
+};
 
 export default todoInput;

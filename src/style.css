@@ -118,21 +118,3 @@ hr {
   color: gray;
   width: 80%;
 }
-
-/* .clicked {
-  background-color: yellow;
-  background-color: rgb(219,215,168);
-}
-
-.item-clicked {
-  width: 70%;
-  padding: 10px 0;
-  border: none;
-  background-color: rgb(219,215,168);
-  border-style: none;
-  outline: none;
-  color: rgb(138, 138, 138);
-  font-size: 1rem;
-  font-weight: 200;
-  z-index: 1;
-} */

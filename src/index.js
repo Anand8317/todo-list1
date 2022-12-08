@@ -2,9 +2,9 @@ import './style.css';
 import refresh from './Images/refresh.png';
 import enter from './Images/enter.png';
 import newTask from './modules/newTask';
-import {setLs, getLs} from './modules/localStorage'
+import { setLs, getLs } from './modules/localStorage';
 import display from './modules/display';
-import todoInput from './modules/todoInput'
+import todoInput from './modules/todoInput';
 
 const imgRefresh = document.getElementById('refresh');
 imgRefresh.src = refresh;
@@ -16,30 +16,19 @@ display();
 todoInput();
 
 const input = document.getElementById('input1');
-const input_img = document.getElementById('enter');
+const inputImg = document.getElementById('enter');
 
-input_img.addEventListener("click", () => {
+inputImg.addEventListener('click', () => {
   newTask(input.value);
-  input.value = "";
+  input.value = '';
   display();
   setLs();
   todoInput();
-  
-})
+});
 
-input.addEventListener("keypress", (event) => {
-  if (event.key === "Enter") {
+input.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
     event.preventDefault();
-    input_img.click();
+    inputImg.click();
   }
-})
-
-
-
-
-
-
-
-
-
-
+});

@@ -1,17 +1,16 @@
-import tasks from "./array";
+import tasks from './array';
 
 export const setLs = () => {
-  localStorage.setItem("tasks", JSON.stringify(tasks));
-}
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+};
 
 export const getLs = () => {
-  if (localStorage.getItem("tasks") !== null) {
-    let tasks_temp = localStorage.getItem("tasks");
-    tasks_temp = JSON.parse(tasks_temp);
+  if (localStorage.getItem('tasks') !== null) {
+    let tasksTemp = localStorage.getItem('tasks');
+    tasksTemp = JSON.parse(tasksTemp);
     tasks.length = 0;
-    tasks_temp.forEach(element => {
+    tasksTemp.forEach((element) => {
       tasks.push(element);
     });
   }
-  
-}
+};

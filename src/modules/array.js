@@ -1,3 +1,3 @@
-var tasks = [];
+const tasks = [];
 
 export default tasks;
