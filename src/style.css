@@ -85,7 +85,7 @@ hr {
 .list-items {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  padding: 20px 0;
   color: gray;
 }
 
@@ -96,3 +96,43 @@ hr {
 .bar {
   margin-right: 25px;
 }
+
+.hover1:hover {
+  cursor: pointer;
+}
+
+#input1 {
+  border-style: none;
+  outline: none;
+}
+
+.input2-container {
+  width: 80%;
+}
+
+.desc-input {
+  border-style: none;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: gray;
+  width: 80%;
+}
+
+/* .clicked {
+  background-color: yellow;
+  background-color: rgb(219,215,168);
+}
+
+.item-clicked {
+  width: 70%;
+  padding: 10px 0;
+  border: none;
+  background-color: rgb(219,215,168);
+  border-style: none;
+  outline: none;
+  color: rgb(138, 138, 138);
+  font-size: 1rem;
+  font-weight: 200;
+  z-index: 1;
+} */
