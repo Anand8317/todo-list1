@@ -55,6 +55,10 @@
 
 - Run this command: git clone https://github.com/Anand8317/todo-list1.git
 
+- Download the node_modules folder and copy it in root folder https://drive.google.com/drive/folders/1-fRPes7Tl-0dUKwNE7s79RNrEnD3KNZF?usp=share_link
+
+- Run this command: npm start server
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
