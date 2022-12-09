@@ -17,6 +17,17 @@ const display = () => {
     `;
     document.getElementById(`${element.index}i`).setAttribute('value', element.desc);
   });
+
+  let checkbox = document.getElementsByClassName('checkbox');
+  checkbox = [...checkbox];
+  checkbox.forEach((element) => {
+    const { parentNode } = element.parentNode;
+    if (tasks[parentNode.id - 1].completed === true) {
+      element.checked = true;
+      const crossInput = element.nextElementSibling;
+      crossInput.style.textDecoration = 'line-through';
+    }
+  });
 };
 
 export default display;

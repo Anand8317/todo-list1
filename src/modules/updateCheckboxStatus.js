@@ -1,4 +1,5 @@
 import tasks from './array';
+import { setLs } from './localStorage';
 
 const updateCheckboxStatus = (status, index) => {
   if (status === true) {
@@ -6,6 +7,7 @@ const updateCheckboxStatus = (status, index) => {
   } else if (status === false) {
     tasks[index - 1].completed = false;
   }
+  setLs();
 };
 
 export default updateCheckboxStatus;
