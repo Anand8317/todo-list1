@@ -35,18 +35,18 @@ input.addEventListener('keypress', (event) => {
   }
 });
 
-document.addEventListener("click", function(e){
+document.addEventListener('click', (e) => {
   if (e.target.closest('.checkbox')) {
     const checkbox = e.target.closest('.checkbox');
-    const parentNode = checkbox.parentNode.parentNode;
+    const { parentNode } = checkbox.parentNode;
     const crossInput = checkbox.nextElementSibling;
 
-    if (checkbox.checked == true) {
+    if (checkbox.checked === true) {
       updateCheckboxStatus(true, parentNode.id);
       crossInput.style.textDecoration = 'line-through';
     }
-  
-    if (checkbox.checked == false) {
+
+    if (checkbox.checked === false) {
       updateCheckboxStatus(false, parentNode.id);
       crossInput.style.textDecoration = 'none';
     }
@@ -59,9 +59,9 @@ clearButton.addEventListener('click', () => {
   setLs();
   display();
   todoInput();
-})
+});
 
 imgRefresh.addEventListener('click', () => {
   display();
   todoInput();
-})
+});
