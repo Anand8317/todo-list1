@@ -5,6 +5,8 @@ import newTask from './modules/newTask';
 import { setLs, getLs } from './modules/localStorage';
 import display from './modules/display';
 import todoInput from './modules/todoInput';
+import updateCheckboxStatus from './modules/updateCheckboxStatus';
+import clearAllCompleted from './modules/clearAllCompleted';
 
 const imgRefresh = document.getElementById('refresh');
 imgRefresh.src = refresh;
@@ -31,4 +33,35 @@ input.addEventListener('keypress', (event) => {
     event.preventDefault();
     inputImg.click();
   }
+});
+
+document.addEventListener('click', (e) => {
+  if (e.target.closest('.checkbox')) {
+    const checkbox = e.target.closest('.checkbox');
+    const { parentNode } = checkbox.parentNode;
+    const crossInput = checkbox.nextElementSibling;
+
+    if (checkbox.checked === true) {
+      updateCheckboxStatus(true, parentNode.id);
+      crossInput.style.textDecoration = 'line-through';
+    }
+
+    if (checkbox.checked === false) {
+      updateCheckboxStatus(false, parentNode.id);
+      crossInput.style.textDecoration = 'none';
+    }
+  }
+});
+
+const clearButton = document.querySelector('#footer');
+clearButton.addEventListener('click', () => {
+  clearAllCompleted();
+  setLs();
+  display();
+  todoInput();
+});
+
+imgRefresh.addEventListener('click', () => {
+  display();
+  todoInput();
 });
