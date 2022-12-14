@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
     "server": "node server.js",
     "build": "webpack"
@@ -27,7 +27,6 @@
     "webpack-dev-middleware": "^6.0.1"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.19.6",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.2",
     "eslint": "^7.32.0",
