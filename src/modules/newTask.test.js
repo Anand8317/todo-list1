@@ -1,5 +1,6 @@
 import newTask from './newTask';
 import tasks from './array';
+import del from './del'
 
 describe('Test add and remove functions', () => {
   test('Adding an Item to the array', () => {
@@ -16,5 +17,9 @@ describe('Test add and remove functions', () => {
 
     // Assert
     expect(tasks).toEqual([obj]);
+  });
+  test('Removing an item from the array', () => {
+    del(1);
+    expect(tasks).toHaveLength(0);
   });
 });
