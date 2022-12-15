@@ -44,6 +44,7 @@ describe('Testing edit task, status update and clear all button', () => {
     // Assert
     expect(tasks[index - 1].status).toBe(result);
   });
+
   test('Test clear all completed function', () => {
     // Arrange
     document.body.innerHTML = `
@@ -91,6 +92,7 @@ describe('Testing edit task, status update and clear all button', () => {
     `;
     const checkboxes = document.querySelectorAll('.checkbox');
     const checkboxes1 = [...checkboxes];
+
     // Act
     tasks.length = 0;
     newTask('First Task');
@@ -98,6 +100,7 @@ describe('Testing edit task, status update and clear all button', () => {
     updateCheckboxStatus(checkboxes1[0].checked, 1);
     updateCheckboxStatus(checkboxes1[1].checked, 2);
     clearAllCompleted();
+
     // Assert
     expect(tasks.length).toEqual(0);
   });
