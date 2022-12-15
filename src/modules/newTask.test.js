@@ -4,22 +4,16 @@ import del from './del'
 
 describe('Test add and remove functions', () => {
   test('Adding an Item to the array', () => {
-    // Arrange
-    const item = 'Dry the Clothes';
-    const obj = {
-      desc: 'Dry the Clothes',
-      completed: false,
-      index: 1,
-    };
-
-    // Act
-    newTask(item);
-
-    // Assert
-    expect(tasks).toEqual([obj]);
+    newTask('First task');
+    newTask('Second task');
+    newTask('Third task');
+    expect(tasks[0].desc).toBe(('First task'));
+    expect(tasks[1].desc).toBe(('Second task'));
+    expect(tasks.length).toEqual(3)
   });
   test('Removing an item from the array', () => {
     del(1);
-    expect(tasks).toHaveLength(0);
+    expect(tasks).toHaveLength(2);
+    expect(tasks[0].desc).toBe('Second task')
   });
 });
